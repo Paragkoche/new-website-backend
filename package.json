@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "nodemon --quiet ./src/index.ts",
-    "start": "node ./build/index.ts",
+    "start": "node ./build/index.js",
     "test": "jest",
     "build": "npx tsc"
   },
