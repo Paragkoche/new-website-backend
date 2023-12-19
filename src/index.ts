@@ -7,7 +7,7 @@
 import app from "@/app";
 import db from "./database/db";
 import { log } from "./helpers/console";
-app.listen(8080, async () => {
+app.listen(3000, async () => {
   console.clear();
   log("warring", "Data base loading..");
   await db.initialize();
