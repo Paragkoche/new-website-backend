@@ -1,0 +1,23 @@
+{
+  "openapi": "3.0.2",
+  "info": {
+    "title": "Webstack - dashboard Api",
+    "version": "1.0"
+  },
+  "servers": [{ "url": "http://localhost:8080/" }],
+  "paths": {
+    "/": {
+      "get": {
+        "description": "ping - pong",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    }
+  }
+}
