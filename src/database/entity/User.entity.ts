@@ -1,6 +1,7 @@
 import {
   AfterInsert,
   BeforeInsert,
+  BeforeUpdate,
   Column,
   Entity,
   JoinColumn,
@@ -47,6 +48,12 @@ export class User {
   @AfterInsert()
   async logs() {
     log("info", "user create successfully");
+  }
+  @BeforeUpdate()
+  async ProtectPassword() {
+    if (this.password) {
+      log("error", "password change");
+    }
   }
 }
 
