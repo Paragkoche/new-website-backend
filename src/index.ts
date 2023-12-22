@@ -1,13 +1,7 @@
-/**
- * index.ts
- *
- * This file is specifically designed for connecting to the database and starting/listening to the server.
- * It imports the Express application from the 'app' module and initiates the server on port 8080.
- */
 import app from "@/app";
-import db from "./database/db";
-import { log } from "./helpers/console";
-app.listen(8080, async () => {
+import db from "@/database/db";
+import { log } from "@/helpers/console";
+app.listen(3000, async () => {
   console.clear();
   log("warring", "Data base loading..");
   await db.initialize();
