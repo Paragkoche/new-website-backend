@@ -1,5 +1,6 @@
 import db from "@/database/db";
 import { UserRepo } from "@/database";
+import { UpdateResult } from "typeorm";
 beforeEach(async () => {
   await db.initialize();
 });
@@ -39,9 +40,9 @@ describe("Test Database", () => {
           isDelete: true,
         }
       );
-      console.log(UpdateUserData);
+      // console.log(UpdateUserData);
 
-      expect(UpdateUserData).toBeInstanceOf(Object);
+      expect(UpdateUserData).toBeInstanceOf(UpdateResult);
     });
     it("[USER] Delete", async () => {
       const deleteUserData = await UserRepo.delete({

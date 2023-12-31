@@ -13,10 +13,7 @@ describe("Test api", () => {
   describe("[test 1] /user endpoint", () => {
     describe("[USER]", () => {
       it("[User] GET", async () => {
-        const [start, end] = [
-          Math.floor(Math.random() * 10),
-          Math.floor(Math.random() * 10),
-        ];
+        const [start, end] = [0, 1];
         const res = await req.get(`/api/v1/users/?start=${start}&end=${end}`);
 
         expect(res.body.data.length).toBeGreaterThanOrEqual(0);
